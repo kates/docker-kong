@@ -27,6 +27,8 @@ RUN set -ex; \
     fi \
     && apt-get update \
     && apt-get install --yes /tmp/kong.deb \
+      libmaxminddb-dev \
+      mmdb-bin \
     && rm -rf /var/lib/apt/lists/* \
     && rm -rf /tmp/kong.deb \
     && chown kong:0 /usr/local/bin/kong \
